@@ -1,0 +1,8 @@
+td:nth-child(5){
+    cursor: pointer;
+    
+  }
+  td:nth-child(6){
+    cursor: pointer;
+    color: lightcoral;
+  }
