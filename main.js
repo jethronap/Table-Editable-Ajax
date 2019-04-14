@@ -12,6 +12,7 @@ function init($) {
     // jQuery.ajax(); --> $.ajax(); // $ alias for jQuery
 
     let $getUsersButton = document.querySelector('#getusers');
+    let $addUserButton = document.querySelector('#add-user');
     let $table = document.querySelector("#output"); // document.querySelectorAll();
     let $tbody = $table.querySelector("tbody");
     let options = {
@@ -19,7 +20,7 @@ function init($) {
         success: handleResponse,
     }
 
-    let $addUserButton = document.querySelector('#adduser');
+    
 
     //add a click that refers to the whole table:
     document.querySelector("table")
@@ -89,13 +90,19 @@ function init($) {
 
     // add new username:
     function addUser() {
-        let $userName = document.querySelector("#username");
-        let value = $userName.value;
+        let $name = document.querySelector("#inputName");
+        let $userName = document.querySelector("#inputUsername");
+        let $email = document.querySelector("#inputEmail");
+        let nameVal = $name.value;
+        let usernameVal = $userName.value;
+        let emailVal = $email.value;
         let addOptions = {
             url: "http://localhost:3000/users/",
             method: 'POST',
             data: {
-                username: value
+                name: nameVal,
+                username: usernameVal,
+                email: emailVal,
             },
             success: handleAddUser,
         }
