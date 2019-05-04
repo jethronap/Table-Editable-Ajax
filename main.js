@@ -73,7 +73,7 @@ function init($) {
 
     }
 
-    // delete user when click o delete:
+    // delete user when click on delete:
     function delUser(id) {
 
         let delOptions = {
@@ -88,7 +88,7 @@ function init($) {
         }
     }
 
-    // add new username:
+    // add new user details:
     function addUser() {
         let $name = document.querySelector("#inputName");
         let $userName = document.querySelector("#inputUsername");
